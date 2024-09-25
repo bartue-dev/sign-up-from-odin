@@ -136,16 +136,19 @@ form label {
   letter-spacing: 2px;
 }
 
-form {
-  box-shadow: 1px 3px 6px lightgray;
-  padding: 10px 30px 30px 30px;
-  background-color: white;
+form .input-box{
+  display: flex;
+  gap: 30px;
 }
 
 form .inputs-container {
-  display: flex;
-  align-items: center;
   gap: 50px;
+  position: relative;
+
+  box-shadow: 1px 3px 6px lightgray;
+  background-color: white;
+  padding: 20px 30px 30px 30px;
+ 
 }
 
 form .left-inputs,
@@ -168,6 +171,27 @@ form .right-inputs {
   color: white;
   width: 180px;
   padding: 10px;
+  cursor: pointer;
+}
+
+form input:focus {
+  border: 1px solid blue !important;
+}
+
+form input:invalid {
+  border: 1px solid red;
+}
+
+.error-text {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 5px;
+  color: red;
+  display: none;
+}
+
+.button-container p > a {
+  color: #596D48 ;
 }
 
 
